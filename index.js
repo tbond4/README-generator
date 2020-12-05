@@ -2,8 +2,55 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 // array of questions for user I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-const questions = ["What is the title of your project?", "What is your project description?","What are the project installation instructions?",
-"What are the usage instructions?", "What are the contribution guidlines?","What are the test instructions?","What is your GitHub username?","What is your Email?","What is the project liscense?"];
+const questions = [ 
+    {
+        type: "input",
+        message:"What is the title of your project?",
+        name:"title",
+    },
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name:"gitHub",
+    },
+    {
+        type: "input",
+        message: "What is your Email?",
+        name:"email",
+    },
+    {
+        type: "input",
+        message: "What is your project description?",
+        name:"description",
+    },
+    {
+        type: "input",
+        message: "What command is needed to install packages for your project?",
+        name:"installation",
+    },
+    {
+        type: "input",
+        message:"What are the instructions for using your project?",
+        name:"usage",
+    },
+    {
+        type: "input",
+        message:"How can a user contribute to your project?",
+        name:"contributing",
+    },
+    {
+        type: "input",
+        message: "What command should be run to test this project?",
+        name:"tests",
+    },
+    
+    {
+        type: "list",
+        choices: [ "MIT", "GPLv2","Apache" ],
+        message: "What is your project liscense?",
+        name:"license",
+    },
+];
 //names are already given
 // function to write README file
 function writeToFile(fileName, data) {
@@ -13,54 +60,7 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
 //inquierer.prompt.then => pass respobse object to generatemarkdown
-inquirer.prompt([
-    {
-        type: "input",
-        message: questions[0],
-        name:"title",
-    },
-    {
-        type: "input",
-        message: questions[1],
-        name:"description",
-    },
-    {
-        type: "input",
-        message: questions[2],
-        name:"installation",
-    },
-    {
-        type: "input",
-        message: questions[3],
-        name:"usage",
-    },
-    {
-        type: "input",
-        message: questions[4],
-        name:"contributing",
-    },
-    {
-        type: "input",
-        message: questions[5],
-        name:"tests",
-    },
-    {
-        type: "input",
-        message: questions[6],
-        name:"gitHub",
-    },
-    {
-        type: "input",
-        message: questions[7],
-        name:"email",
-    },
-    {
-        type: "list",
-        choices: [ "MIT", "GPLv2","Apache" ],
-        message: questions[8],
-        name:"license",
-    },
-]).then(data => {
+inquirer.prompt(questions).then(data => {
    writeToFile("READMENEW.md", generateMarkdown(data));
 })
 }
