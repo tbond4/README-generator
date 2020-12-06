@@ -61,6 +61,13 @@ function writeToFile(fileName, data) {
 function init() {
 //inquierer.prompt.then => pass respobse object to generatemarkdown
 inquirer.prompt(questions).then(data => {
+    if(data.license=="MIT"){
+        data.license= "MIT  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    }else if(data.license=="GPLv2"){
+        data.license="GPLv2 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)"
+    }else{
+        data.license="Apache [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    }
    writeToFile("READMENEW.md", generateMarkdown(data));
 })
 }
