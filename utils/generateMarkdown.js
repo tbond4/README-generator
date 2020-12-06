@@ -5,7 +5,7 @@ function generateMarkdown(data) {
   ## Description
     ${data.description}
 
-  ## Table of COntents
+  ## Table of Contents
 
   *[Installation](#installation)
 

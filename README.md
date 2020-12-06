@@ -3,7 +3,7 @@
   ## Description
     This project is a node application that allows users to quickly generate professiional looking ReadMe's for any project.
 
-  ## Table of COntents
+  ## Table of Contents
 
   *[Installation](#installation)
 
@@ -21,10 +21,10 @@
   npm i will install the necessary dependencies
 
   ## Usage
-  This project is used with node and inquierer, the user will be prompted with questions in the terminal and that data will be used to create their ReadMe 
+  This project is used with node and inquierer, the user will be prompted with questions in the terminal and that data will be used to create their ReadMe. Walk through video:https://drive.google.com/file/d/1PjyW8futC_qGD1PywWHB0CV9U1m9Ct50/view
 
   ## License
-  MIT  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
 
   ## Contributing
   Contact me via gitHub or email to contribute
