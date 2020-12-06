@@ -1,7 +1,7 @@
-# title
+# ReadMe Generator
 
   ## Description
-    desc
+    This project is a node application that allows users to quickly generate professiional looking ReadMe's for any project.
 
   ## Table of COntents
 
@@ -18,21 +18,21 @@
   *[Questions](#questions)
 
   ## Installation
-  install
+  npm i will install the necessary dependencies
 
   ## Usage
-  run it
+  This project is used with node and inquierer, the user will be prompted with questions in the terminal and that data will be used to create their ReadMe 
 
   ## License
-  MIT
+  MIT  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Contributing
-  contribute
+  Contact me via gitHub or email to contribute
 
   ## Tests
-  test
+  node index.js will run this project in the terminal
 
   ## Questions
-  username
-  email
+  Tbond4
+  tristanebond@gmail.com
   
